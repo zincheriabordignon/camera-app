@@ -53,7 +53,8 @@ const handleStream = (stream) => {
   //streamStarted = true;
 };
 
-cameraOptions.onchange = () => {
+
+cameraOptions.addEventListener('change', function(e) {
   const updatedConstraints = {
     ...constraints,
     deviceId: {
@@ -62,7 +63,7 @@ cameraOptions.onchange = () => {
   };
   startStream(updatedConstraints);
   alert(updatedConstraints);
-};
+})
 
 startStream(constraints);
 
