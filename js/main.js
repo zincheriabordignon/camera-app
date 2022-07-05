@@ -61,6 +61,7 @@ cameraOptions.onchange = () => {
     }
   };
   startStream(updatedConstraints);
+  alert(updatedConstraints);
 };
 
 startStream(constraints);
